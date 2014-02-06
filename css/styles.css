@@ -1,0 +1,481 @@
+/*============================================\*
+  $form
+\*===========================================*/
+
+/* Form
+---------------------------------------------*/
+
+.form {
+	padding: 20px;
+}
+
+/* Form fieldset 
+---------------------------------------------*/
+
+/**
+* Common requirement to reset default browser <fieldset> styling.
+*/
+
+.form fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Form legend 
+---------------------------------------------*/
+
+/**
+* <legend> positioned off screen but still accessible to assistive technologies.
+*/
+
+.form legend {
+	position: absolute;
+	top: -999em;
+	left: -999em;
+}
+
+/* Form row 
+---------------------------------------------*/
+
+.form .form__row {
+	margin-bottom: 20px;
+	background-color: #F0F0F0;
+	border: 1px solid #CCC;
+	padding: 20px;
+	overflow: hidden; /* <=== This temporary declaration should be removed and replaced with a clearfix */
+}
+
+/* Error modifier */
+
+.form .form__row--error {
+	border-color: red;
+	background-color: #FFC0CB;
+}
+
+/* Description group
+---------------------------------------------*/
+
+.form .form__desc-group {
+}
+
+/* Description item
+---------------------------------------------*/
+
+.form .form__desc-item {
+	margin-bottom: 15px;
+}
+
+/**
+* 1. This can be used to style mock labels if required.
+*/
+
+/* Description label */
+
+.form .form__desc-item label,
+.form .form__desc-item .label /* [1] */ {
+	font-size: 16px;
+}
+
+/* Control group
+---------------------------------------------*/
+
+/**
+* 1. This negative value is used to counteract the positive spacing from each subsequent item(s).
+*/
+
+.form .form__control-group {
+	margin-bottom: -20px; /* [1] */
+}
+
+/* Control item
+---------------------------------------------*/
+
+/**
+* 1. This value is used to space one or more items within a group.
+*/
+
+.form .form__control-item {
+	margin-bottom: 20px; /* [1] */
+}
+
+/* Control item label */
+
+/**
+* 1. This can be used to style mock labels where required.
+*/
+
+.form .form__control-item label,
+.form .form__control-item .label /* [1] */ {
+	display: block;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+/* Collective item input [type]s */
+
+/**
+* 1. This font-size must be >= 16px to prevent auto zoom on devices.
+* 2. Correct font-family may not be inherited in all browsers.
+* 3. This resets margins, which may be rendered differently in Firefox 4+, Safari 5, and Chrome.
+* 4. Due to browser support, this recommendation is only for projects that support IE8 and up.
+* 5. Border properties are needed to override default browser styling.
+*/
+
+.form .form__control-item input[type="text"],
+.form .form__control-item input[type="password"],
+.form .form__control-item input[type="tel"],
+.form .form__control-item input[type="email"],
+.form .form__control-item textarea,
+.form .form__control-item select {
+	font-size: 16px; /* [1] */
+	font-family: inherit; /* [2] */
+	margin: 0; /* [3] */
+	-webkit-box-sizing: border-box; /* [4] */
+	-moz-box-sizing: border-box; /* [4] */
+	box-sizing: border-box; /* [4] */
+	border: 1px solid #999; /* [5] */
+	padding: 10px;
+	width: 100%;
+	display: block;
+}
+
+/* Disabled */
+
+.form .form__control-item input[type="text"]:disabled,
+.form .form__control-item input[type="password"]:disabled,
+.form .form__control-item input[type="tel"]:disabled,
+.form .form__control-item input[type="email"]:disabled,
+.form .form__control-item textarea:disabled,
+.form .form__control-item select:disabled {
+	background-color: #DDD;
+	color: #999;
+	cursor: not-allowed;
+}
+
+/* Read only */
+
+.form .form__control-item input[type="text"][readonly],
+.form .form__control-item input[type="password"][readonly],
+.form .form__control-item input[type="tel"][readonly],
+.form .form__control-item input[type="email"][readonly],
+.form .form__control-item textarea[readonly],
+.form .form__control-item select[readonly] {
+	color: #999;
+}
+
+/* Error modifier */
+
+.form .form__row--error .form__control-item input[type="text"],
+.form .form__row--error .form__control-item input[type="password"],
+.form .form__row--error .form__control-item input[type="tel"],
+.form .form__row--error .form__control-item input[type="email"],
+.form .form__row--error .form__control-item textarea,
+.form .form__row--error .form__control-item select {
+	border-color: red;
+	color: red;
+}
+
+/* Textarea */
+
+.form .form__control-item textarea {
+	resize: none;
+}
+
+/* Select */
+
+.form .form__control-item select {
+}
+
+/* Radio & checkbox */
+
+/**
+* 1. Floating the input allows more control with the layout of the label.
+* 2. This declaration resets default browser margins and allows the floated input space before the label.
+*/
+
+.form .form__control-item input[type="radio"],
+.form .form__control-item input[type="checkbox"] {
+	float: left; /* [1] */
+	margin: 3px 5px 0 0; /* [2] */
+}
+
+/**
+* 1. This resets the required label margin used on other types of input.
+* 2. Used to clear the floated input when label text flows over two lines.
+* 3. This declaration allows the label to maintain its position beside the input when text flows over multiple lines.
+*/
+
+.form .form__control-item input[type="radio"] + label,
+.form .form__control-item input[type="checkbox"] + label {
+	margin-bottom: 0; /* [1] */
+	overflow: hidden; /* [2] */
+	display: block; /* [3] */
+}
+
+/* Custom  radio modifier & custom checkbox modifier */
+
+/**
+* Usage reference: http://lea.verou.me/2011/05/rule-filtering-based-on-specific-selectors-support/
+* Browser support: This technique works in gte IE8.
+* An inner span must be used on the label as a marker for attaching the pseudo element.
+* #foo doesn't reference any particular element, it's used to prevent browsers from implementing the later 
+  selectors if they aren't understood (since most browsers will drop the entire selector if any part of it fails).
+  */
+
+/**
+* This declaration is used to clip and hide the actual input.
+*/
+
+#foo:checked::before,
+.form .form__control-item--custom-radio input[type="radio"],
+.form .form__control-item--custom-checkbox input[type="checkbox"] {
+	position:absolute;
+	clip: rect(0,0,0,0);
+	clip: rect(0 0 0 0);
+}
+
+/**
+* The ::before pseudo element is used to create a container for the custom control.
+*/
+
+#foo:checked,
+.form .form__control-item--custom-radio input[type="radio"] + label::before,
+.form .form__control-item--custom-checkbox input[type="checkbox"] + label::before {
+	float: left;
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+	display: block;
+}
+
+/**
+* Extended usage: JavaScript can be used to add a focus class to aid accessibility and improve keyboard navigation.
+*/
+
+#foo:checked,
+.form .form__control-item--custom-radio input[type="radio"] + label[class*="-focus"]::before,
+.form .form__control-item--custom-checkbox input[type="checkbox"] + label[class*="-focus"]::before {
+	opacity: .5;
+}
+
+/**
+* 1. Used to keep left alignment consistent against the floated pseudo element.
+*/
+
+.form .form__control-item--custom-radio input[type="radio"] + label span,
+.form .form__control-item--custom-checkbox input[type="checkbox"] + label span {
+	overflow: hidden; /* [1] */
+	display: block;
+	padding-top: 3px;
+}
+
+/* Default image */
+
+#foo:checked,
+.form .form__control-item--custom-radio input[type="radio"] + label::before {
+	content: url('../images/radio.png');
+}
+
+#foo:checked,
+.form .form__control-item--custom-checkbox input[type="checkbox"] + label::before {
+	content: url('../images/checkbox.png');
+}
+
+/* Checked image */
+
+.form .form__control-item--custom-radio input[type="radio"]:checked + label::before {
+	content: url('../images/radio-checked.png');
+}
+
+.form .form__control-item--custom-checkbox input[type="checkbox"]:checked + label::before {
+	content: url('../images/checkbox-checked.png');
+}
+
+/* Control entry
+---------------------------------------------*/
+
+/**
+* 1. Used to contain optional icons that may be positioned absolute.
+* 2. The inline-block property is used to contain the input for absolute positioning of icons.
+* 3. Full width used for mobile first build approach.
+*/
+
+.form  .form__control-group .form__control-entry {
+	position: relative; /* [1] */
+	display: inline-block; /* [2] */
+	width: 100%; /* [3] */
+}
+
+/* Control icon
+---------------------------------------------*/
+
+/**
+* Used for icon placement to support text input[type] controls.
+*/
+
+/**
+* 1. This value allows the icon to be placed left or right within the input.
+* 2. Left positioning by default.
+* 3. Absolute positioning allows the icon to be as high as the input.
+* 4. Hiding text within the element.
+* 5. Due to browser support, this recommendation is only for projects that support IE8 and up.
+*/
+
+.form .form__control-entry .form__control-icon {
+	position: absolute; /* [1] */
+	top: 0;
+	left: 0; /* [2] */
+	display: block;
+	width: 40px;
+	height: 100%; /* [3] */
+	border:1px solid #999;
+	background-color: #CCC;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	text-indent: -999em; /* [4] */
+	-webkit-box-sizing: border-box; /* [5] */
+	-moz-box-sizing: border-box; /* [5] */
+	box-sizing: border-box; /* [5] */
+}
+
+/* Error modifier */
+
+.form .form__row--error .form__control-entry .form__control-icon {
+	border-color: red;
+}
+
+/* Icon left modifier */
+
+/**
+* 1. Adjust the left padding on the input when an icon is present.
+*/
+
+.form .form__control-entry--icon-left input[type="text"],
+.form .form__control-entry--icon-left input[type="password"],
+.form .form__control-entry--icon-left input[type="tel"],
+.form .form__control-entry--icon-left input[type="email"] {
+	padding-left: 50px; /* [1] */
+}
+
+/**
+* Left modifier
+*/
+
+.form .form__control-entry--icon-left .form__control-icon {
+	left: 0;
+	right: auto;
+}
+
+/* Icon right modifier */
+
+/**
+* 1. Adjust the right padding on the input when an icon is present.
+*/
+
+.form .form__control-entry--icon-right input[type="text"],
+.form .form__control-entry--icon-right input[type="password"],
+.form .form__control-entry--icon-right input[type="tel"],
+.form .form__control-entry--icon-right input[type="email"] {
+	padding-right: 50px; /* [1] */
+}
+
+/**
+* Right modifier
+*/
+
+.form .form__control-entry--icon-right .form__control-icon {
+	left: auto;
+	right: 0;
+}
+
+/* Padlock modifier */
+
+.form .form__control-entry .form__control-icon--padlock {
+	background-image: url('../images/icon-padlock.png');
+}
+
+/* User modifier */
+
+.form .form__control-entry .form__control-icon--user {
+	background-image: url('../images/icon-user.png');
+}
+
+@media only screen and (min-width: 600px) {
+
+	/* Description group
+	---------------------------------------------*/
+
+	/* Form inline modifier */ 
+
+	.form.form--inline .form__desc-group {
+		width: 25%;
+		float: left;
+	}
+
+	/* Control group
+	---------------------------------------------*/
+
+	/* Form inline modifier */  
+
+	.form.form--inline .form__control-group {
+		width: 70%;
+		float: right;
+	}
+
+	/* Inline modifier */ 
+
+	.form .form__control-group--inline .form__control-item {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	/* Control entry
+	---------------------------------------------*/
+
+	.form  .form__control-group .form__control-entry {
+		width: 70%;
+	}
+
+	/* Inline group modifier  */
+
+	.form .form__control-group--inline .form__control-entry {
+		width: auto;
+	}
+
+	/* Control item
+	---------------------------------------------*/
+
+	/* Collective item input [type]s */
+
+	.form .form__control-item input[type="text"],
+	.form .form__control-item input[type="password"],
+	.form .form__control-item input[type="tel"],
+	.form .form__control-item input[type="email"],
+	.form .form__control-item textarea,
+	.form .form__control-item select {
+		display: block;
+	}
+
+	/* Inline modifier */ 
+
+	.form .form__control-item--inline {
+		margin-right: 15px;
+	}
+
+	.form .form__control-item--inline label,
+	.form .form__control-item--inline .label {
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	.form .form__control-item--inline input[type="text"],
+	.form .form__control-item--inline input[type="password"],
+	.form .form__control-item--inline input[type="tel"],
+	.form .form__control-item--inline input[type="email"],
+	.form .form__control-item--inline textarea,
+	.form .form__control-item--inline select {
+		display: inline-block;
+		width: auto;
+	}
+}

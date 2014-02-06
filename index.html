@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Boilerplate Form</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+
+    <form>
+        <div class="form form--inline" role="form">
+
+            <fieldset>
+                <legend>Default elements</legend>
+
+                <!-- [type="text"] -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="text">[type="text"]</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <input type="text" id="text" placeholder="Sample placeholder" autofocus />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [type="text"] disabled -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="textDisabled">[type="text"] disabled</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <input type="text" id="textDisabled" value="Disabled input" disabled />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [type="text"] readonly -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="textReadOnly">[type="text"] readonly</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <input type="text" id="textReadOnly" value="Read only input" readonly />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [type="password"] -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="password">[type="password"]</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry form__control-entry--icon-left">
+                                <input type="password" id="password" />
+                                <span class="form__control-icon form__control-icon--padlock"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [type="tel"] -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="tel">[type="tel"]</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <input type="tel" id="tel" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [type="email"] -->
+                <div class="form__row form__row--error">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="email">[type="email"]</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry form__control-entry--icon-right">
+                                <input type="email" id="email" />
+                                <span class="form__control-icon form__control-icon--user"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="textarea">textarea</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <textarea rows="5" id="textarea"></textarea>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="select">Select</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <select id="select">
+                                    <option value="">Select...</option>
+                                    <optgroup label="Cadbury">
+                                        <option value="wispaGold">Wispa Gold</option>
+                                        <option value="curlyWurly">Curly Wurly</option>
+                                        <option value="dairyMilkFruitNut">Dairy Milk Fruit &amp; Nut</option>
+                                    </optgroup>
+                                    <optgroup label="Nestle">
+                                        <option value="kitKat">KitKat</option>
+                                        <option value="lionBar">Lion Bar</option>
+                                        <option value="yorkie">Yorkie</option>
+                                    </optgroup>
+                                    <optgroup label="Wonka">
+                                        <option value="whippleScrumptiousFudgemallow">Whipple-Scrumptious Fudgemallow</option>
+                                        <option value="nuttyCrunchSurprise">Nutty Crunch Surprise</option>
+                                        <option value="theRealWonkaBar">The real Wonka Bar</option>
+                                    </optgroup>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select -->
+                <div class="form__row">
+                    <div class="form__desc-group">
+                        <div class="form__desc-item">
+                            <label for="selectDisabled">Select disabled</label>
+                        </div>
+                    </div>
+                    <div class="form__control-group">
+                        <div class="form__control-item">
+                            <span class="form__control-entry">
+                                <select id="selectDisabled" disabled>
+                                    <option value="">Select...</option>
+                                    <optgroup label="Cadbury">
+                                        <option selected value="wispaGold">Wispa Gold</option>
+                                        <option value="curlyWurly">Curly Wurly</option>
+                                        <option value="dairyMilkFruitNut">Dairy Milk Fruit &amp; Nut</option>
+                                    </optgroup>
+                                    <optgroup label="Nestle">
+                                        <option value="kitKat">KitKat</option>
+                                        <option value="lionBar">Lion Bar</option>
+                                        <option value="yorkie">Yorkie</option>
+                                    </optgroup>
+                                    <optgroup label="Wonka">
+                                        <option value="whippleScrumptiousFudgemallow">Whipple-Scrumptious Fudgemallow</option>
+                                        <option value="nuttyCrunchSurprise">Nutty Crunch Surprise</option>
+                                        <option value="theRealWonkaBar">The real Wonka Bar</option>
+                                    </optgroup>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [type="radio"] -->
+                <fieldset>
+                    <legend>[type="radio"]</legend>
+                    <div class="form__row">
+                        <div class="form__desc-group">
+                            <div class="form__desc-item">
+                                <span class="label">[type="radio"]</span>
+                            </div>
+                        </div>
+                        <div class="form__control-group">
+                            <div class="form__control-item">
+                                <input type="radio" id="radio1" name="radio">
+                                <label for="radio1">Label</label>
+                            </div>
+                            <div class="form__control-item">
+                                <input type="radio" id="radio2" name="radio">
+                                <label for="radio2">Label with more text</label>
+                            </div>
+                            <div class="form__control-item">
+                                <input type="radio" id="radio3" name="radio">
+                                <label for="radio3">Label</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- [type="radio"] custom -->
+                <fieldset>
+                    <legend>[type="radio"] custom</legend>
+                    <div class="form__row">
+                        <div class="form__desc-group">
+                            <div class="form__desc-item">
+                                <span class="label">[type="radio"] custom</span>
+                            </div>
+                        </div>
+                        <div class="form__control-group">
+                            <div class="form__control-item form__control-item--custom-radio custom-checkbox-radio">
+                                <input type="radio" id="radioCustom1" name="radioCustom">
+                                <label for="radioCustom1"><span>Label</span></label>
+                            </div>
+                            <div class="form__control-item form__control-item--custom-radio custom-checkbox-radio">
+                                <input type="radio" id="radioCustom2" name="radioCustom">
+                                <label for="radioCustom2"><span>Label with more text</span></label>
+                            </div>
+                            <div class="form__control-item form__control-item--custom-radio custom-checkbox-radio">
+                                <input type="radio" id="radioCustom3" name="radioCustom">
+                                <label for="radioCustom3"><span>Label</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- [type="checkbox"] -->
+                <fieldset>
+                    <legend>[type="checkbox"]</legend>
+                    <div class="form__row">
+                        <div class="form__desc-group">
+                            <div class="form__desc-item">
+                                <span class="label">[type="checkbox"]</span>
+                            </div>
+                        </div>
+                        <div class="form__control-group">
+                            <div class="form__control-item">
+                                <input type="checkbox" id="checkbox1" name="checkbox">
+                                <label for="checkbox1">Label</label>
+                            </div>
+                            <div class="form__control-item">
+                                <input type="checkbox" id="checkbox2" name="checkbox">
+                                <label for="checkbox2">Label with more text</label>
+                            </div>
+                            <div class="form__control-item">
+                                <input type="checkbox" id="checkbox3" name="checkbox">
+                                <label for="checkbox3">Label</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- [type="checkbox"] custom -->
+                <fieldset>
+                    <legend>[type="checkbox"] custom</legend>
+                    <div class="form__row">
+                        <div class="form__desc-group">
+                            <div class="form__desc-item">
+                                <span class="label">[type="checkbox"] custom</span>
+                            </div>
+                        </div>
+                        <div class="form__control-group">
+                            <div class="form__control-item form__control-item--custom-checkbox custom-checkbox-radio">
+                                <input type="checkbox" id="checkboxCustom1" name="checkboxCustom">
+                                <label for="checkboxCustom1"><span>Label</span></label>
+                            </div>
+                            <div class="form__control-item form__control-item--custom-checkbox custom-checkbox-radio">
+                                <input type="checkbox" id="checkboxCustom2" name="checkboxCustom">
+                                <label for="checkboxCustom2"><span>Label with more text</span></label>
+                            </div>
+                            <div class="form__control-item form__control-item--custom-checkbox custom-checkbox-radio">
+                                <input type="checkbox" id="checkboxCustom3" name="checkboxCustom">
+                                <label for="checkboxCustom3"><span>Label</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- [type="text"] multiple -->
+                <fieldset>
+                    <legend>multiple [type="text"]</legend>
+                    <div class="form__row">
+                        <div class="form__desc-group">
+                            <div class="form__desc-item">
+                                <label for="textMultiple1">[type="text"] multiple</label>
+                            </div>
+                        </div>
+                        <div class="form__control-group">
+                            <div class="form__control-item">
+                                <label for="textMultiple1">Label</label>
+                                <span class="form__control-entry">
+                                    <input type="text" id="textMultiple1" />
+                                </span>
+                            </div>
+                            <div class="form__control-item">
+                                <label for="textMultiple2">Label</label>
+                                <span class="form__control-entry">
+                                    <input type="text" id="textMultiple2" />
+                                </span>
+                            </div>
+                            <div class="form__control-item">
+                                <label for="textMultiple3">Label</label>
+                                <span class="form__control-entry">
+                                    <input type="text" id="textMultiple3" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- select multiple -->
+                <fieldset>
+                    <legend>Multiple select</legend>
+                    <div class="form__row">
+                        <div class="form__desc-group">
+                            <div class="form__desc-item">
+                                <label for="selectMultiple1">Select multiple (inline)</label>
+                            </div>
+                        </div>
+                        <div class="form__control-group form__control-group--inline">
+                            <div class="form__control-item form__control-item--inline">
+                                <label for="selectMultiple1">Label</label>
+                                <span class="form__control-entry">
+                                    <select id="selectMultiple1">
+                                        <option value="">Select...</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="4">05</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="form__control-item form__control-item--inline">
+                                <label for="selectMultiple2">Label</label>
+                                <span class="form__control-entry">
+                                    <select id="selectMultiple2">
+                                        <option value="">Select...</option>
+                                        <option value="jan">Jan</option>
+                                        <option value="feb">Feb</option>
+                                        <option value="mar">Mar</option>
+                                        <option value="apr">Apr</option>
+                                        <option value="may">May</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="form__control-item form__control-item--inline">
+                                <label for="selectMultiple3">Label</label>
+                                <span class="form__control-entry">
+                                    <select id="selectMultiple3">
+                                        <option value="">Select...</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </fieldset>
+        </div>
+    </form>
+
+</body>
+
+</html>
