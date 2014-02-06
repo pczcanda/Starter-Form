@@ -408,7 +408,7 @@
 
 	/* Form inline modifier */ 
 
-	.form.form--inline .form__desc-group {
+	.form--inline .form__desc-group {
 		width: 25%;
 		float: left;
 	}
@@ -418,12 +418,12 @@
 
 	/* Form inline modifier */  
 
-	.form.form--inline .form__control-group {
+	.form--inline .form__control-group {
 		width: 70%;
 		float: right;
 	}
 
-	/* Inline modifier */ 
+	/* Inline group modifier for item */ 
 
 	.form .form__control-group--inline .form__control-item {
 		display: inline-block;
@@ -437,7 +437,7 @@
 		width: 70%;
 	}
 
-	/* Inline group modifier  */
+	/* Inline group modifier for entry  */
 
 	.form .form__control-group--inline .form__control-entry {
 		width: auto;
