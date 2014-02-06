@@ -76,9 +76,9 @@ An error modifier can be applied to each required row for validation styling.
 <div class="form__row form__row--error">
 ```
 
-**Icon control**
+**Entry additions**
 
-A control entry element can be added for presentation or navigation. This can be configured using a left or right modifier, as shown in the example.
+Entry additions can be added for presentation or navigation. The placement of this can be configured using a left or right modifier, as shown in the example.
 
 ```html
 <!-- Part of a form row -->
@@ -94,7 +94,7 @@ A control entry element can be added for presentation or navigation. This can be
 
 Custom radio and checkboxes have been included using [this tried and tested technique](http://lea.verou.me/2011/05/rule-filtering-based-on-specific-selectors-support/)
 
-In addition, there is a small optional JavaScript file that sets a useful class on focus.
+In addition, there is an optional JavaScript file which has a jQuery dependency. This sets classes on input focus and blur which is useful for highlighting on keyboard navigation.
 
 ##Browser Support
 
